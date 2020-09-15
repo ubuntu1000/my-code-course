@@ -1,0 +1,16 @@
+title: my-code
+description: my-code is a course which is related to machine learning
+template:
+  repo: my-code-template
+  name: my-code
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
